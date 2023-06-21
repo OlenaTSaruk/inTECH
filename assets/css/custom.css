@@ -2,4 +2,172 @@
  * Custom code goes here.
  * A template should always ship with an empty custom.css
  */
- #header{ background: red !important; }
+
+/*-----------------font-------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
+body {
+   font-family: 'Prompt', sans-serif;
+   letter-spacing: 0.06em;
+}
+
+#wrapper {
+   padding: 0;
+}
+/*-----------------slider----------------*/
+#carousel figure img {
+   height: 630px;
+}
+.carousel .carousel-item figure {
+   position: relative;
+   width: -webkit-fill-available;
+}
+.carousel .carousel-inner {
+   height: fit-content;
+}
+.carousel .carousel-item img {
+   height: 100%;
+}
+.carousel .carousel-item .caption {
+   max-width: 582px;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+#custom-text-slider{
+   text-align: center;
+}
+#custom-text-slider h2 {
+   font-size: 2rem;
+   /* font-size: 1.67vw; */
+   color: #fff;
+   font-weight: 500;
+   margin-bottom: 1.5rem;
+}
+#custom-text-slider p {
+   font-size: 1.5rem;
+   margin-bottom: 1.625rem;
+}
+a.main-button-slider {
+   display: inline-block;
+   margin-top: 1.25rem;
+   padding: 1rem 2rem;
+   font-size: 1.125rem;
+   color: #fff;
+   border: 1px solid #fff;
+}
+
+#carousel .direction {
+   display: none;
+}
+
+#carousel figure img {
+   height: auto;
+}
+
+@media (max-width: 1440px) {
+   #custom-text-slider h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+   }
+   #custom-text-slider p {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+   }
+   a.main-button-slider {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1.125rem;
+   }
+}
+@media (max-width: 1200px) {
+   #carousel figcaption {
+      top: 50%;
+}
+@media (max-width: 991px) {
+   #carousel figcaption {
+      margin: 0;
+      top: 50%;
+   }
+   .carousel .carousel-item .caption {
+      position: absolute;
+      top: 50%;
+   }
+   .carousel .carousel-item .caption .caption-description p{
+      color: #fff;
+   }
+   #custom-text-slider h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.25rem;
+   }
+   #custom-text-slider p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+   }
+   a.main-button-slider {
+      margin-top: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      font-size: 1rem;
+   }
+}
+@media (max-width: 768px) {
+   .carousel .carousel-item img {
+      width: fit-content;
+   }
+   #carousel figure img {
+      height: 350px;
+      object-fit: cover;
+   }
+}
+@media (min-width: 576px) {
+   .carousel-indicators {
+      display: none;
+   }
+   .carousel .carousel-item .caption {
+      top: 40%;
+   }
+}
+/*--------------custom text-------------------*/
+#custom-text {
+   padding: 0;
+   /* background-image: url("/img/cms/slider-home.jpg"); */
+}
+/* .custom-text-text {
+   max-height: 630px;
+   max-width: 100%;
+   height: auto;
+} */
+#custom-text-header {
+   position: relative;
+}
+.custom-text-text {
+   position: absolute;
+   top:0%;
+}
+@media (max-width: 425px) {
+   #custom-text-slider p {
+      font-size: 14px;
+   }
+   a.main-button-slider {
+      font-size: 14px;
+   }
+}
+
+/*-------------section with icons-------------*/
+#section-ikons {
+   display: flex;
+   justify-content: space-around;
+}
+ #section-ikons .ikons {
+   text-align: center;
+   margin-top: auto;
+}
+ #section-ikons .ikon-label {
+   text-transform: uppercase;
+}
+ 
+@media (min-width: 992px) {
+   .content-anywhere-displayhome>.container>.row>.col-12.col-lg-6 {
+      width: 100%;
+   }
+}
+}
