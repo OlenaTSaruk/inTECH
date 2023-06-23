@@ -25,7 +25,7 @@
 
 <div class="block_newsletter col-lg-8 col-md-12 col-sm-12" id="blockEmailSubscription_{$hookName}">
   <div class="row">
-    <p id="block-newsletter-label" class="col-md-5 col-xs-12">{l s='Get our latest news and special sales' d='Shop.Theme.Global'}</p>
+    <p id="block-newsletter-label" class="col-md-5 col-xs-12">{l s='Dołącz do naszego Newslettera! </br> Możesz zrezygnować w każdej chwili' d='Shop.Theme.Global'}</p>
     <div class="col-md-7 col-xs-12">
       <form action="{$urls.current_url}#blockEmailSubscription_{$hookName}" method="post">
         <div class="row">
@@ -34,7 +34,7 @@
               class="btn btn-primary float-xs-right hidden-xs-down"
               name="submitNewsletter"
               type="submit"
-              value="{l s='Subscribe' d='Shop.Theme.Actions'}"
+              value="{l s='Zapisz się' d='Shop.Theme.Actions'}"
             >
             <input
               class="btn btn-primary float-xs-right hidden-sm-up"
@@ -47,7 +47,7 @@
                 name="email"
                 type="email"
                 value="{$value}"
-                placeholder="{l s='Your email address' d='Shop.Forms.Labels'}"
+                placeholder="{l s='Wpisz swój adres email...' d='Shop.Forms.Labels'}"
                 aria-labelledby="block-newsletter-label"
                 required
               >
