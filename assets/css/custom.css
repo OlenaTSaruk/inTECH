@@ -21,6 +21,31 @@ body {
 #wrapper {
    padding: 0;
 }
+/* a:visited {
+   text-decoration: none;
+} */
+/* ---------------header-nav----------------- */
+#header .header-top a[data-depth="0"] {
+   color: #414141;
+   font-size: 15px;
+   font-weight: 500;
+   text-transform: none;
+}
+#header .header-top a[data-depth="0"]:hover {
+   color: #EFD246;
+}
+#header .header-top .position-static {
+   position: static;
+   display: inline-flex;
+}
+#search_widget {
+   width: 30px;
+   min-width: 3rem;
+}
+#search_widget form i {
+   padding: 0;
+}
+
 /*-----------------slider----------------*/
 #carousel {
    margin-bottom: 0;
@@ -367,6 +392,11 @@ a.main-button-slider:hover {
 #ybc-mnf-block .ybc-mnf-block-title {
    display: none;
 }
+/* #footer .block_newsletter p.text-GDPR {
+   font-size: 7px;
+   line-height: 141.523%;
+   letter-spacing: 0.245px;
+} */
 
 /* ---------------newsletter----------------- */
 #footer .container-fluid, #footer .block_newsletter {
@@ -383,4 +413,52 @@ a.main-button-slider:hover {
    }
 .block_newsletter {
    max-width: 100%;
+}
+
+/* ---------------footer-nav----------------- */
+.footer-container {
+   padding-top: 3rem;
+}
+.footer-container p.h3 {
+   color: #000;
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 141.523%;
+   letter-spacing: 0.56px;
+   text-transform: none;
+}
+.footer-container a.custom-page-link,  .block-contact p {
+   color: #000;
+   font-size: 14px;
+   line-height: 263.023%;
+   letter-spacing: 0.49px;
+   margin: 0 0 5px;
+}
+
+#social-footer {
+   display: flex;
+   flex-direction: column;
+}
+#social-footer .social{
+   margin-top: 40px;
+   display: flex;
+   justify-content: space-around;
+}
+
+/*------------------footer-copiryght----------------*/
+#footer .сopyright {
+   margin-top: 5rem;
+   background: #d9d9d9;
+}
+#footer .сopyright p.text-sm-left {
+   padding-top: 10px;
+   display: table-cell;
+   vertical-align: middle;
+
+}  
+#footer .сopyright a { 
+   color: rgba(0, 0, 0, 0.33);
+   font-size: 14px;
+   line-height: 263.023%;
+   letter-spacing: 6.02px;
 }
