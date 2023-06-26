@@ -377,4 +377,10 @@ a.main-button-slider:hover {
 }
 .block_newsletter #block-newsletter-label {
    color:#fff;
+   font-size: 22px;
+   font-weight: 700;
+   line-height: 141.523%;
+   }
+.block_newsletter {
+   max-width: 100%;
 }
