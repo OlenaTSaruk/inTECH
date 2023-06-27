@@ -11,6 +11,7 @@ body {
 }
 .btn, .btn-primary {
    background: #EFD246;
+   transition-duration: 0.4s;
 }
 .btn:hover, .btn-primary:hover {
   color: #EFD246;
@@ -20,32 +21,61 @@ body {
 }
 #wrapper {
    padding: 0;
+   background: #fff;
 }
 /* a:visited {
    text-decoration: none;
 } */
 /* ---------------header-nav----------------- */
+#header .header-top-right {
+   justify-content: space-between;
+   padding: 0;
+}
 #header .header-top a[data-depth="0"] {
+   padding: 0 15px 0 0;
    color: #414141;
    font-size: 15px;
    font-weight: 500;
    text-transform: none;
+   transition-duration: 0.4s;
 }
 #header .header-top a[data-depth="0"]:hover {
    color: #EFD246;
+   transition-duration: 0.4s;
+}
+#header .top-menu a.dropdown-item {
+   padding: 0 10 0 0;
 }
 #header .header-top .position-static {
    position: static;
    display: inline-flex;
+   align-items: center;
 }
 #search_widget {
    width: 30px;
    min-width: 3rem;
 }
 #search_widget form i {
+   position: static;
    padding: 0;
 }
 
+#_desktop_cart .header {
+   display: flex;
+}
+#_desktop_cart .header:nth-child(2) {
+   color: #3E3E3E;
+}
+
+#_desktop_user_info .btn-primary {
+   color: #fff;
+   text-transform: none;
+   transition-duration: 0.4s;
+}
+#_desktop_user_info .btn-primary:hover {
+   color: #EFD246;
+   transition-duration: 0.4s;
+}
 /*-----------------slider----------------*/
 #carousel {
    margin-bottom: 0;
@@ -90,10 +120,12 @@ a.main-button-slider {
    font-size: 1.125rem;
    color: #fff;
    border: 1px solid #fff;
+   transition-duration: 0.4s;
 }
 a.main-button-slider:hover {
    color: #EFD246;
    border: 1px solid #EFD246;
+   /* transition-duration: 0.4s; */
    transition-duration: 0.4s;
 }
 #carousel .direction {
@@ -370,6 +402,7 @@ a.main-button-slider:hover {
    padding: 1rem 2rem;
    font-size: 1.125rem;
    border: 1px solid #EFD246;
+   transition-duration: 0.4s;
 }
 .img-btn_btn:hover {
    color: #fff;
@@ -416,6 +449,9 @@ a.main-button-slider:hover {
 }
 
 /* ---------------footer-nav----------------- */
+#footer .container {
+   position: relative;
+}
 .footer-container {
    padding-top: 3rem;
 }
@@ -444,7 +480,11 @@ a.main-button-slider:hover {
    display: flex;
    justify-content: space-around;
 }
-
+#contentanywhere-block-12 {
+   position: absolute;
+   right: 0;
+   padding: 34px 0 0 0;
+}
 /*------------------footer-copiryght----------------*/
 #footer .сopyright {
    margin-top: 5rem;
@@ -461,4 +501,10 @@ a.main-button-slider:hover {
    font-size: 14px;
    line-height: 263.023%;
    letter-spacing: 6.02px;
+}
+
+
+/* --------------------------page Product---------------------------- */
+.breadcrumb {
+   margin-top: 20px;
 }
