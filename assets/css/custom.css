@@ -1,7 +1,7 @@
 /*
  * Custom code goes here.
  * A template should always ship with an empty custom.css
- */
+
 
 /*-----------------font-------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
@@ -26,6 +26,181 @@ body {
 /* a:visited {
    text-decoration: none;
 } */
+*/
+
+
+
+/*--------------------color-----------------------*/
+.a:hover {
+  color: #EFD246;
+}
+.btn-primary.focus,
+.btn-primary:focus {
+    background-color: #EFD246;
+}
+.btn-outline-primary {
+   color: #EFD246;
+   border-color: #EFD246;
+}
+.btn-outline-primary:hover {
+   background-color: #EFD246;
+   border-color: #EFD246;
+}
+.btn-outline-primary.focus,
+.btn-outline-primary:focus {
+    background-color: #EFD246;
+    border-color: #EFD246;
+}
+.btn-outline-primary.active,
+.btn-outline-primary:active,
+.open>.btn-outline-primary.dropdown-toggle {
+    background-color: #EFD246;
+    border-color: #EFD246;
+}
+.btn-link {
+   color: #EFD246;
+}
+.dropdown-item.active,
+.dropdown-item.active:focus,
+.dropdown-item.active:hover {
+    text-decoration: none;
+    background-color: #EFD246;
+}
+.nav-pills .nav-item.open .nav-link,
+.nav-pills .nav-item.open .nav-link:focus,
+.nav-pills .nav-item.open .nav-link:hover,
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover {
+    background-color: #EFD246;
+}
+.card-primary {
+   background-color: #EFD246;
+   border-color: #EFD246;
+}
+.card-outline-primary,
+.card-outline-secondary {
+    border-color: #EFD246;
+}
+.page-item.active .page-link,
+.page-item.active .page-link:focus,
+.page-item.active .page-link:hover {
+    background-color: #EFD246;
+    border-color: #EFD246;
+}
+.page-link {
+   color: #EFD246;
+}
+.tag-primary {
+   background-color: #EFD246;
+}
+.list-group-item.active,
+.list-group-item.active:focus,
+.list-group-item.active:hover {
+    background-color: #EFD246;
+    border-color: #EFD246;
+}
+.block_newsletter form input[type=text]:focus+button .search,
+.btn-unstyle:focus .expand-more,
+.search-widget form input[type=text]:focus+button .search {
+    color: #EFD246;
+}
+.form-control:focus {
+   outline: .1875rem solid #EFD246;
+}
+.input-group.focus {
+   outline: .1875rem solid #EFD246;
+}
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: #EFD246;
+}
+.search-widget form input[type=text]:focus {
+   outline: 3px #EFD246 solid;
+}
+body#checkout section.checkout-step .address-item.selected {
+   border: #EFD246 3px solid;
+}
+.product-miniature .highlighted-informations .quick-view:hover {
+   color: #EFD246;
+}
+.facet-dropdown.open>.select-title {
+   border: 3px solid #EFD246;
+}
+.facet-dropdown .select-list:hover {
+   background: #EFD246;
+}
+.pagination .current a {
+   color: #EFD246;
+}
+#subcategories ul li .subcategory-name:hover,
+.block-categories .arrows .arrow-down:hover,
+.block-categories .arrows .arrow-right:hover,
+.block-categories .collapse-icons .add:hover,
+.block-categories .collapse-icons .remove:hover,
+.cart-grid-body a.label:hover {
+    color: #EFD246;
+}
+#subcategories ul li:hover .subcategory-image a {
+   border: 5px solid #EFD246;
+}
+.product-price {
+   color: #EFD246;
+}
+.tabs .nav-tabs .nav-link.active {
+   color: #EFD246;
+
+}
+.tabs .nav-tabs .nav-link.active,
+.tabs .nav-tabs .nav-link:hover {
+   border-bottom: #EFD246 3px solid;
+}
+#product-modal .modal-content .modal-body .product-images img:hover {
+   border: #EFD246 3px solid;
+}
+#blockcart-modal .product-name {
+   color: #EFD246;
+}
+.product-images>li.thumb-container>.thumb.selected,
+.product-images>li.thumb-container>.thumb:hover {
+    border: #EFD246 3px solid;
+}
+.product-flags li.product-flag {
+   background: #EFD246;
+}
+.product-customization .product-message:focus {
+   outline: .1875rem solid #EFD246;
+}
+.block-promo .promo-input+button {
+   border: 2px solid #EFD246;
+}
+.block-promo .promo-code-button.cancel-promo {
+   color: #EFD246;
+}
+.account-list a:hover,
+.block_newsletter form button[type=submit] .search:hover,
+.footer-container li a:hover {
+    color: #EFD246;
+}
+.block-social ul li:hover {
+   background-color: #EFD246;
+}
+.block_newsletter form input[type=text]:focus {
+   outline: 3px #EFD246 solid;
+}
+.block_newsletter form input[type=email]:focus {
+   border: 3px #EFD246 solid;
+}
+#header a:hover {
+   color: #EFD246;
+   text-decoration: none
+}
+#header .header-nav .cart-preview.active {
+   background: #EFD246;
+}
+#header .header-nav .blockcart a:hover {
+   color: #EFD246;
+}
 /* ---------------header-nav----------------- */
 #header .header-top-right {
    justify-content: space-between;
@@ -507,4 +682,7 @@ a.main-button-slider:hover {
 /* --------------------------page Product---------------------------- */
 .breadcrumb {
    margin-top: 20px;
+}
+.product-flag.out_of_stock {
+   
 }
