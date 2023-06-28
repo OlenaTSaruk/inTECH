@@ -28,11 +28,16 @@ body {
 } */
 */
 
-
-
 /*--------------------color-----------------------*/
 .a:hover {
   color: #EFD246;
+}
+a.link-cart {
+   color: #3E3E3E;
+}
+a.link-cart:hover {
+   color: #3E3E3E;
+   text-decoration: underline solid #EFD246 ;
 }
 .btn-primary.focus,
 .btn-primary:focus {
@@ -145,7 +150,7 @@ body#checkout section.checkout-step .address-item.selected {
    border: 5px solid #EFD246;
 }
 .product-price {
-   color: #EFD246;
+   color: #323232;
 }
 .tabs .nav-tabs .nav-link.active {
    color: #EFD246;
@@ -192,7 +197,7 @@ body#checkout section.checkout-step .address-item.selected {
    border: 3px #EFD246 solid;
 }
 #header a:hover {
-   color: #EFD246;
+   color: #3E3E3E;
    text-decoration: none
 }
 #header .header-nav .cart-preview.active {
@@ -200,6 +205,12 @@ body#checkout section.checkout-step .address-item.selected {
 }
 #header .header-nav .blockcart a:hover {
    color: #EFD246;
+}
+#tab-content p, #tab-content a {
+   color: #242424;
+}
+#tab-content .attachment {
+   margin-bottom: 40px;
 }
 /* ---------------header-nav----------------- */
 #header .header-top-right {
@@ -213,11 +224,23 @@ body#checkout section.checkout-step .address-item.selected {
    font-weight: 500;
    text-transform: none;
    transition-duration: 0.4s;
+
 }
 #header .header-top a[data-depth="0"]:hover {
    color: #EFD246;
    transition-duration: 0.4s;
 }
+/*-------------------menu line
+#header .top-menu li a[data-depth="0"] {
+   background-position: bottom left;
+   background-size: 0% 5px;
+   background-image: linear-gradient (#EFD246, #EFD246);
+   background-repeat: no-repeat;
+   transition: all .4s ease-in-out;
+ }
+ #header .top-menu li a[data-depth="0"]:hover {
+   background-size: 100% 5px;
+ }                                        ----------------*/
 #header .top-menu a.dropdown-item {
    padding: 0 10 0 0;
 }
@@ -227,8 +250,9 @@ body#checkout section.checkout-step .address-item.selected {
    align-items: center;
 }
 #search_widget {
+   margin-right: 10px;
    width: 30px;
-   min-width: 3rem;
+   min-width: 2rem;
 }
 #search_widget form i {
    position: static;
@@ -238,10 +262,29 @@ body#checkout section.checkout-step .address-item.selected {
 #_desktop_cart .header {
    display: flex;
 }
-#_desktop_cart .header:nth-child(2) {
-   color: #3E3E3E;
+#_desktop_cart .header img {
+   margin-right: 5px;
 }
-
+#_desktop_cart .total-value {
+   font-size: 14px;
+}
+/* ---------------наведення на кошик----------------*/
+/* #_desktop_cart .header .a:hover {
+   color: #3E3E3E;
+} */
+/* #_desktop_cart .header:nth-child(2) {
+   color: #3E3E3E;
+} */
+/* a.link-cart:hover {
+   color: #3E3E3E;
+   text-decoration: underline;
+} */
+a.link-cart {
+   margin-right: 10px;
+   display: inline-flex;
+   align-items: center;
+   
+}
 #_desktop_user_info .btn-primary {
    color: #fff;
    text-transform: none;
@@ -600,6 +643,9 @@ a.main-button-slider:hover {
 #ybc-mnf-block .ybc-mnf-block-title {
    display: none;
 }
+#ybc-mnf-block .ybc-mnf-block-a-img{
+   text-align: center;
+}
 /* #footer .block_newsletter p.text-GDPR {
    font-size: 7px;
    line-height: 141.523%;
@@ -682,7 +728,86 @@ a.main-button-slider:hover {
 /* --------------------------page Product---------------------------- */
 .breadcrumb {
    margin-top: 20px;
+   margin-bottom: 40px;
 }
-.product-flag.out_of_stock {
+#product .product-container {
+   margin-right: 0px;
+   margin-left: 0px;
+   padding: 30px 55px 30px;
+   border: 1px solid #C0C0C0;
+}
+.product-container h1 {
+   color: #242424;
+   font-size: 22px;
+   font-weight: 500;
+   line-height: 171.2%;
+   letter-spacing: 0.22px;
+   text-transform: none;
+}
+
+.product-description p{
+   margin-bottom: 0;
+   color: #787878;
+   text-align: justify;
+   font-size: 12px;
+   line-height: 171.7%;
+   letter-spacing: 1.2px;
+}
+.product-prices-manufacturer{
+   display: flex;
+   justify-content: space-between;
+}
+.product-prices {
+   display: flex;
+}
+.tax-shipping-delivery-label {
+   padding-left: 8px;
+   text-transform: lowercase;
+}
+.manufacturer-image{
+   max-width: 150px;
+}
+button.btn-primary.add-to-cart{
+   background: #2F2F2F;
+   color: #EFD246;
+   text-align: center;
+   font-size: 18px;
+   font-weight: 600;
+   line-height: 200.7%;
+   letter-spacing: 2.07px;
+   display: flex;
+   width: 262px;
+   flex-direction: column;
+   justify-content: center;
+   flex-shrink: 0;
+}
+.btn.btn-primary.add-to-cart:hover {
+   color: #2F2F2F;
+   background: #EFD246;
+}
+.product-add-to-cart .control-label {
+   display: none;
+}
+button.btn-primary.add-to-cart:hover{
    
+}
+.btn.disabled, .btn:disabled {
+   opacity: 1;
+}
+
+.product-additional-info .tabs {
+   margin-top: 0;
+   padding: 0;
+}
+
+.product-quantity {
+   margin-bottom: 16px;
+}
+
+.blockreassurance_product .item-product {
+   margin-right: 10px;
+}
+
+#main .tabs {
+   padding: 0;
 }
