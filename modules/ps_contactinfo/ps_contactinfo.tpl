@@ -68,8 +68,8 @@
         {mailto address=$contact_infos.email encode="javascript"}
     {/if}
   </div>*}
-  {assign var=cms_content value=CMS::getCMSContent(6, true, true)}
 
+  {assign var=cms_content value=CMS::getCMSContent(6, true, true)}
   {$cms_content.content nofilter}
 
 </div>

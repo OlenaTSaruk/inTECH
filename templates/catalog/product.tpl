@@ -49,7 +49,6 @@
 
   <section id="main">
     <meta content="{$product.url}">
-    {debug}
 
     <div class="row product-container js-product-container">
       <div class="col-md-6">

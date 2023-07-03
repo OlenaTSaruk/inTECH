@@ -27,13 +27,13 @@
 {block name='head_microdata_special'}
   {include file='_partials/microdata/product-list-jsonld.tpl' listing=$listing}
 {/block}
-
+<section id="descripion category"> 
+</section>
 {block name='content'}
   <section id="main">
-
-    {block name='product_list_header'}
-      <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>
-    {/block}
+{block name='product_list_header'}
+  <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>
+{/block}
 
     {block name='subcategory_list'}
       {if isset($subcategories) && $subcategories|@count > 0}
@@ -42,6 +42,8 @@
     {/block}
     
     {hook h="displayHeaderCategory"}
+
+
 
     <section id="products">
       {if $listing.products|count}
@@ -86,3 +88,4 @@
 
   </section>
 {/block}
+
