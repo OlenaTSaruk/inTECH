@@ -58,9 +58,18 @@
 
         {hook h="displayWrapperTop"}
         <div class="container">
-          {block name='breadcrumb'}
-            {include file='_partials/breadcrumb.tpl'}
-          {/block}
+          {if $page.page_name !=='index' }
+            {block name='breadcrumb'}
+              {include file='_partials/breadcrumb.tpl'}
+            {/block}
+          {/if}
+
+{*--------------------------description top----------------------*}
+          {if $page.page_name == 'category'}
+            {block name='product_list_header'}
+              <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>
+            {/block}
+          {/if}
 
           <div class="row">
             {block name="left_column"}
