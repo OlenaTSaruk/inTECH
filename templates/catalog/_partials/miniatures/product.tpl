@@ -76,7 +76,7 @@
         {/block}
 
         {block name='product_price_and_shipping'}
-          {if $product.show_price}
+          {if $product.show_price}{debug}
             <div class="product-price-and-shipping">
               {if $product.has_discount}
                 {hook h='displayProductPriceBlock' product=$product type="old_price"}
@@ -123,6 +123,9 @@
                   </div>
                 {/if}
               </span>
+              
+              {* ------------------add Netto------------------*}
+              <span class="pric-netto">{$product.price_tax_exc"} zł</span>
 
               {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 
