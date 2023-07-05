@@ -442,6 +442,10 @@ a.main-button-slider:hover {
 }
 
 @media (max-width: 991px) {
+   #carousel.carousel {
+      padding-bottom: 0;
+   }
+
    #carousel figcaption {
       margin: 0;
       top: 50%;
@@ -692,6 +696,10 @@ a.main-button-slider:hover {
    padding: 0;
 }
 
+#custom-text img {
+   width: 100%;
+}
+
 #img-btn {
    position: relative;
 }
@@ -737,7 +745,27 @@ a.main-button-slider:hover {
    transition-duration: 0.4s;
 }
 
-@media (min-width: 768px) {}
+@media (max-width: 991px) {
+   #img-btn {
+      overflow: hidden;
+   }
+
+   #img-btn .img-btn_blok {
+      flex-direction: column;
+   }
+
+   #custom-text img {
+      width: auto;
+      max-width: none;
+   }
+}
+
+@media (max-width: 539px) {
+   #img-btn .img-btn_p {
+      width: 360px;
+      margin: auto;
+   }
+}
 
 /* ---------------manufacturer----------------- */
 #ybc-mnf-block {
@@ -821,6 +849,41 @@ a.main-button-slider:hover {
    position: absolute;
    right: 0;
    padding: 34px 0 0 0;
+}
+
+@media (max-width: 991px) {
+   #social-footer .logo-footer img {
+      max-width: 180px;
+      height: auto;
+   }
+
+   #social-footer .social {
+      margin-top: 10px;
+   }
+
+   #social-footer .social a img {
+      width: 32px;
+   }
+}
+
+@media (max-width: 767px) {
+   .footer-container .block-contact .float-xs-right {
+      display: none;
+   }
+
+   .footer-container .block-contact .title {
+      border-bottom: none;
+   }
+
+   .footer-container .block-contact p {
+      padding-left: 10px;
+   }
+
+   #contentanywhere-block-12 {
+      padding: 0;
+      right: 5%;
+      bottom: 2%;
+   }
 }
 
 /*------------------footer-copiryght----------------*/
@@ -1201,16 +1264,18 @@ section.featured-products #product-availability {
    padding-bottom: 50px;
 }
 
+#page-contact .address_nip p,
 #page-contact .address_tel p {
-   color: #000;
-   font-weight: 500;
-}
-
-#page-contact .address_tel p:nth-child(2),
-#page-contact .address_tel p:nth-child(3),
-#page-contact .address_nip p {
    color: #5A5A5A;
    font-weight: 400;
+}
+
+
+#page-contact p.intech,
+#page-contact .address_tel p.address_email,
+#page-contact .address_tel .phone-nombers .nombers p {
+   color: #000;
+   font-weight: 500;
 }
 
 #page-contact .address_tel_email {
@@ -1225,6 +1290,15 @@ section.featured-products #product-availability {
    width: auto;
    height: 200px;
 }
+
+.phone-nombers {
+   display: flex;
+}
+
+.address_tel_phone {
+   margin-top: 8px;
+}
+
 
 /* ------------------filter ikons
 i.product-unavailable {
@@ -1287,4 +1361,10 @@ i.product-unavailable {
    #page-contact .address_photo img {
       width: 250px;
    }
+}
+
+
+.blockreassurance_product svg path {
+   /* stroke: red; */
+   fill: var(--main-color);
 }
