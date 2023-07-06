@@ -85,9 +85,16 @@
           {/block}
 
           <div class="product-prices-manufacturer">
-            {block name='product_prices'}
-              {include file='catalog/_partials/product-prices.tpl'}
-            {/block}
+            <div class="product_all-price">
+              {block name='product_prices'}
+                {include file='catalog/_partials/product-prices.tpl'}
+              {/block}
+
+              {* ------------------add Netto------------------*}
+              {block name='product_prices-netto'}
+                <div class="price-netto">{$product.price_tax_exc} zł</div>
+              {/block}
+            </div>
             {block name="manufacturer-image"}
               <img src="{$manufacturer_image_url}">
             {/block}

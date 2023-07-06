@@ -1,4 +1,0 @@
-# ignore ALL files in ANY directory named .vscode
-/.vscode
-
-.gitignore

@@ -958,6 +958,14 @@ a.main-button-slider:hover {
    color: #9F9F9F;
 }
 
+span.price {
+   font-style: 0.75rem;
+}
+
+.product-description .product-price-and-shipping span.price-netto {
+   font-style: 18px;
+}
+
 .tax-shipping-delivery-label {
    padding-left: 8px;
    text-transform: lowercase;
@@ -1180,27 +1188,13 @@ button.btn-primary.add-to-cart {
    padding-top: 20px;
 }
 
+
 #products .product-quantity .qty {
    display: none;
 }
 
 #products button.btn.btn-primary.add-to-cart {
    font-size: revert;
-}
-
-@media (min-width: 1200px) {
-
-   #products .col-xl-4,
-   #products .col-xl-5 {
-      float: left;
-      width: 25%;
-   }
-}
-
-@media (max-width: 575px) {
-   #products .col-xs-12 {
-      width: 50%;
-   }
 }
 
 .product-price-and-shipping span.price {
@@ -1232,6 +1226,64 @@ button.btn-primary.add-to-cart {
 
 .block-category .block-category-inner .category-cover img {
    width: auto;
+}
+
+.product-prices-manufacturer {
+   align-items: center;
+}
+
+.product-information .product-prices-manufacturer img {
+   height: 6.5vh;
+}
+
+@media (min-width: 1200px) {
+
+   .featured-products .products .col-sm-6,
+   .product-accessories .products .col-sm-6 {
+      width: 20%
+   }
+
+   #products .col-xl-4,
+   #products .col-xl-6 {
+      float: left;
+      width: 25%;
+   }
+
+   .block-categories .collapse-icons {
+      right: -5%;
+   }
+}
+
+@media (max-width: 991px) {
+   .product-flags li.product-flag {
+      font-size: 0.8rem;
+   }
+}
+
+@media (min-width: 768px) {
+   .col-md-3 {
+      width: 35%;
+   }
+
+   .col-md-9 {
+      width: 65%;
+   }
+}
+
+@media (max-width: 767px) {
+   .col-md-3 {
+      width: 30%;
+   }
+
+   .block-categories .collapse-icons {
+      right: -5%;
+   }
+}
+
+@media (max-width: 575px) {
+   #products .col-xs-12 {
+      width: 50%;
+   }
 }
 
 /* -------------------------O nas------------------------ */
@@ -1447,3 +1499,42 @@ i.product-unavailable {
 .blockreassurance_product svg path {
    fill: var(--main-color);
 }
+
+/*----------------Page files---------------
+.file {
+   margin: 10px 0;
+}
+
+.file-category {
+   padding: 10px 10px 20px;
+   text-align: left;
+}
+
+#materialy .file img.file_img {
+   margin-right: 16px;
+}
+
+#materialy .file a {
+   color: #626262;
+}
+
+@media (max-width: 991px) {
+   #materialy .col-md-6 {
+      float: left;
+      width: 50%;
+   }
+}
+
+@media (max-width: 719px) {
+   #materialy .col-sm-12 {
+      float: left;
+      width: 50%;
+   }
+}
+
+@media (max-width: 576px) {
+   #materialy .col-sm-12 {
+      float: left;
+      width: 100%;
+   }
+}-*/
