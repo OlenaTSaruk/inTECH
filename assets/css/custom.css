@@ -956,14 +956,13 @@ a.main-button-slider:hover {
    align-items: center;
    justify-content: center;
    color: #9F9F9F;
-}
-
-span.price {
-   font-style: 0.75rem;
+   font-size: 0.75rem;
 }
 
 .product-description .product-price-and-shipping span.price-netto {
-   font-style: 18px;
+   font-size: 1.25rem;
+   line-height: 155.7%;
+   letter-spacing: 3px;
 }
 
 .tax-shipping-delivery-label {
@@ -1053,6 +1052,7 @@ button.btn-primary.add-to-cart {
 .product-accessories hr,
 .featured-products hr {
    margin-left: 0;
+   margin-bottom: 20px;
    width: 71px;
    height: 5px;
    background: var(--main-color);
@@ -1500,7 +1500,7 @@ i.product-unavailable {
    fill: var(--main-color);
 }
 
-/*----------------Page files---------------
+/*----------------Page files----------------*/
 .file {
    margin: 10px 0;
 }
@@ -1537,4 +1537,4 @@ i.product-unavailable {
       float: left;
       width: 100%;
    }
-}-*/
+}
