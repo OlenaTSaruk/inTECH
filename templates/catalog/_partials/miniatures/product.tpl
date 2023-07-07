@@ -22,6 +22,7 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
+
 {block name='product_miniature_item'}
 <div class="js-product product{if !empty($productClasses)} {$productClasses}{/if}">
   <article class="product-miniature js-product-miniature" data-id-product="{$product.id_product}" data-id-product-attribute="{$product.id_product_attribute}">
@@ -125,7 +126,12 @@
               </span>
               
               {* ------------------add Netto------------------*}
-              <span class="price-netto">{$product.price_tax_exc} zł</span>
+              
+              <span class="price-netto">
+                {assign var=price_netto value=($product.price_tax_exc|number_format: 2:',':' ')}
+                {assign var=format_price value=($price_netto|replace:'.':',')}
+                {$format_price} zł
+              </span>
 
               {hook h='displayProductPriceBlock' product=$product type='unit_price'}
 

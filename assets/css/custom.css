@@ -1173,7 +1173,7 @@ button.btn-primary.add-to-cart {
 }
 
 #wrapper .product-price-and-shipping {
-   color: var(--main-color);
+   color: #232323;
 }
 
 #wrapper .product-price-and-shipping .tax-shipping-delivery-label {
