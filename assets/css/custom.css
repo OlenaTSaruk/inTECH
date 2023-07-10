@@ -14,7 +14,10 @@ body {
 /* ----------------color---------------- */
 :root {
    --main-color: #EFD246;
-   --main-filter: invert(100%) sepia(73%) saturate(2166%) hue-rotate(326deg) brightness(104%) contrast(87%);
+   --new-product: #FF5C5C;
+   --bestseller: #FF9212;
+   --active: #6f6f6f;
+   --active-focus: #2f2f2f;
 }
 
 .a:hover {
@@ -271,6 +274,42 @@ body#checkout section.checkout-step .address-item.selected {
 #wrapper {
    padding: 0;
    background: #fff;
+}
+
+.btn-primary:active:focus {
+   background-color: var(--active-focus);
+}
+
+.btn-primary:active {
+   background-color: var(--active);
+}
+
+.custom-radio input[type=radio]:checked+span {
+   background-color: var(--main-color);
+}
+
+#js-checkout-summary a.js-show-details {
+   color: var(--bestseller);
+}
+
+body#checkout section.checkout-step.-reachable.-current .step-number {
+   background-color: var(--main-color);
+}
+
+.material-icons.rtl-no-flip.done {
+   color: var(--main-color);
+}
+
+.js-address-form a {
+   color: var(--bestseller);
+}
+
+body#checkout a:hover {
+   color: var(--new-product);
+}
+
+.js-terms a {
+   color: var(--bestseller);
 }
 
 /* ---------------header-nav----------------- */
@@ -960,7 +999,7 @@ a.main-button-slider:hover {
 }
 
 .product-description .product-price-and-shipping span.price-netto {
-   font-size: 1.25rem;
+   font-size: 1.125rem;
    line-height: 155.7%;
    letter-spacing: 3px;
 }
@@ -1093,11 +1132,12 @@ button.btn-primary.add-to-cart {
 }
 
 .product-quantity {
-   flex-direction: column;
+   flex-direction: row;
 }
 
 .product-quantity .add {
    justify-content: center;
+   margin: auto;
 }
 
 @media (min-width: 1200px) {
@@ -1167,7 +1207,30 @@ button.btn-primary.add-to-cart {
    }
 }
 
+/*----------------info o iloszcz produktó-------------*/
+#product-availability {
+   display: none;
+}
+
 /*-------------------------Product category----------------------------*/
+.product-flags li.product-flag.new {
+   padding: 3px 32px;
+   background: var(--new-product);
+   font-weight: 400;
+}
+
+.product-miniature .product-flags li.product-flag {
+   font-weight: 400;
+}
+
+.product-miniature .product-flags li.product-flag {
+   min-height: 0;
+}
+
+.product-flag.out_of_stock {
+   display: none;
+}
+
 #wrapper .breadcrumb[data-depth="1"] {
    display: contents;
 }
@@ -1194,7 +1257,7 @@ button.btn-primary.add-to-cart {
 }
 
 #products button.btn.btn-primary.add-to-cart {
-   font-size: revert;
+   font-size: 0.7rem;
 }
 
 .product-price-and-shipping span.price {
@@ -1234,6 +1297,20 @@ button.btn-primary.add-to-cart {
 
 .product-information .product-prices-manufacturer img {
    height: 6.5vh;
+}
+
+.current-price span.current-price-value {
+   font-size: 0.75rem;
+   color: #9a9a9a;
+}
+
+.price-netto .price-netto {
+   font-size: 1.375rem;
+   font-weight: 600;
+}
+
+.product-miniature .product-flags li.product-flag {
+   font-size: 0.75rem;
 }
 
 @media (min-width: 1200px) {
@@ -1277,6 +1354,10 @@ button.btn-primary.add-to-cart {
 
    .block-categories .collapse-icons {
       right: -5%;
+   }
+
+   .product-description .product-price-and-shipping span.price-netto {
+      font-size: 1rem;
    }
 }
 

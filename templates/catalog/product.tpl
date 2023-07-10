@@ -92,7 +92,13 @@
 
               {* ------------------add Netto------------------*}
               {block name='product_prices-netto'}
-                <div class="price-netto">{$product.price_tax_exc} zł</div>
+                <div class="price-netto">
+                  <span class="price-netto">
+                  {assign var=price_netto value=($product.price_tax_exc|number_format: 2:',':' ')}
+                  {assign var=format_price value=($price_netto|replace:'.':',')}
+                  {$format_price} zł
+                  </span>
+              </div>
               {/block}
             </div>
             {block name="manufacturer-image"}

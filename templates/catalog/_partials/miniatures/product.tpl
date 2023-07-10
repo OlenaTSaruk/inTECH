@@ -126,7 +126,6 @@
               </span>
               
               {* ------------------add Netto------------------*}
-              
               <span class="price-netto">
                 {assign var=price_netto value=($product.price_tax_exc|number_format: 2:',':' ')}
                 {assign var=format_price value=($price_netto|replace:'.':',')}
