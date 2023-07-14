@@ -1320,12 +1320,6 @@ button.btn-primary.add-to-cart {
       width: 20%
    }
 
-   #products .col-xl-4,
-   #products .col-xl-6 {
-      float: left;
-      width: 25%;
-   }
-
    .block-categories .collapse-icons {
       right: -5%;
    }

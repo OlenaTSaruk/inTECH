@@ -36,10 +36,12 @@
   {block name="right_column"}
     <div id="right-column" class="col-xs-12 col-sm-4 col-md-3">
       {hook h='displayContactRightColumn'}
+      
     </div>
   {/block}
 {/if}
 
 {block name='page_content'}
   {hook h='displayContactContent'}
+  {hook h='displayContactDepartments'}
 {/block}
