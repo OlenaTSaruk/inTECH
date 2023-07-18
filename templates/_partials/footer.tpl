@@ -54,6 +54,7 @@
       {/block}
     </div>
   </div>
+ {* ---------------------copyright------------------- *}
   <div class="container-fluid сopyright">
     <div class="container"> 
       <div class="row">

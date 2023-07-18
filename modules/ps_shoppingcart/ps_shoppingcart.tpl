@@ -37,18 +37,14 @@
 
 
     
-    <a class="link-cart" href="{$cart_url} rel="nofollow">
-    <img src="http://intechcool.computersoft.net.pl/img/cms/cart.svg" width="20px" height="24px" alt="cart" />
+    <a class="link-cart" href="{$cart_url}" rel="nofollow">
+    <img src="https://intechcool.computersoft.net.pl/img/cms/cart.svg" alt="cart" />
     
-    {if {$cart.totals.total.value} > 0}
+    {*if {$cart.totals.total.value} > 0*}
       <div class="cart-total">
-        <span class="total-value">{{$cart.totals.total.value}}</span>
+        <span class="total-value">{$cart.totals.total.value}</span>
       </div>
-    {else}
-      <div class="empty-cart">
-          0,00 zł
-      </div>
-    {/if}
+    {*/if*}
     </a>
     </div>
   </div>

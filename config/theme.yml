@@ -1,6 +1,11 @@
 parent: classic
 name: child_classic
-display_name: Child theme of classic's theme
+display_name: inTECH
 version: 1.0.0
 assets:
   use_parent_assets: false
+
+author:
+  name: "ComputerSoft"
+  email: "info@computersoft.net.pl"
+  url: "https://computersoft.net.pl"

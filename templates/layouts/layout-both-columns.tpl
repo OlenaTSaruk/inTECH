@@ -65,11 +65,11 @@
           {/if}
 
 {*--------------------------description top----------------------*}
-          {if $page.page_name == 'category'}
-            {block name='product_list_header'}
-              <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>
-            {/block}
-          {/if}
+{*          {if $page.page_name == 'category'}*}
+{*            {block name='product_list_header'}*}
+{*              <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>*}
+{*            {/block}*}
+{*          {/if}*}
 
           <div class="row">
             {block name="left_column"}
@@ -103,6 +103,14 @@
             {/block}
           </div>
         </div>
+{*          --------------------------description bottom----------------------*}
+        <div class="container">
+            {if $page.page_name == 'category'}
+          {block name='product_list_header'}
+            <h1 id="js-product-list-header" class="h2">{$listing.label}</h1>
+          {/block}
+        {/if}
+        </div>
         {hook h="displayWrapperBottom"}
       </section>
 
@@ -122,6 +130,17 @@
     {block name='hook_before_body_closing_tag'}
       {hook h='displayBeforeBodyClosingTag'}
     {/block}
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var element = document.querySelector(".s43");
+                if (element) {
+                    element.click();
+                }
+            }, 200);
+        });
+    </script>
   </body>
 
 </html>

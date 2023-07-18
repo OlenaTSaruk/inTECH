@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $('.qty .input-group, .js-cart-line-product-quantity').each(function () {
         productTouchSpinInit($(this));

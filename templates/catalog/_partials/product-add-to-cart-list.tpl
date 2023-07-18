@@ -26,7 +26,9 @@
   {if !$configuration.is_catalog}
 
     {block name='product_quantity'}
+    
       <div class="product-quantity clearfix">
+      {if $product.add_to_cart_url}
         <div class="qty">
           <input
             type="text"
@@ -41,18 +43,42 @@
             aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
           >
         </div>
+        {/if}
 
         <div class="add">
-          <button
-            class="btn btn-primary add-to-cart"
-            data-button-action="add-to-cart"
-            type="submit"
+          {if $page.page_name != "product"}
             {if !$product.add_to_cart_url}
-              disabled
+              <a class="btn btn-primary add-to-cart" href="{$product.url}">
+                {*            <i class="material-icons shopping-cart">&#xE547;</i>*}
+                {l s='Show' d='Shop.Theme.Actions'}
+              </a>
+            {else}
+              <button
+                      class="btn btn-primary add-to-cart"
+                      data-button-action="add-to-cart"
+                      type="submit"
+                      {if !$product.add_to_cart_url}
+                        disabled
+                      {/if}
+              >
+              
+                <i class="material-icons shopping-cart">&#xE547;</i>
+                {l s='Add to cart' d='Shop.Theme.Actions'}
+              </button>
             {/if}
-          >
-            <span>{l s='Add to cart' d='Shop.Theme.Actions'}</span>
-          </button>
+          {else}
+              <button
+                      class="btn btn-primary add-to-cart"
+                      data-button-action="add-to-cart"
+                      type="submit"
+                      {if !$product.add_to_cart_url}
+                          disabled
+                      {/if}
+              >
+                  {*            <i class="material-icons shopping-cart">&#xE547;</i>*}
+                  {l s='Add to cart' d='Shop.Theme.Actions'}
+              </button>
+          {/if}
         </div>
       </div>
     {/block}

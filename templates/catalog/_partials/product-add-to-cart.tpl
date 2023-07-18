@@ -30,36 +30,59 @@
       <div class="product-quantity clearfix">
         <div class="qty">
           <input
-            type="number"
-            name="qty"
-            id="quantity_wanted"
-            inputmode="numeric"
-            pattern="[0-9]*"
-            {if $product.quantity_wanted}
-              value="{$product.quantity_wanted}"
-              min="{$product.minimal_quantity}"
-            {else}
-              value="1"
-              min="1"
-            {/if}
-            class="input-group"
-            aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
+                  type="number"
+                  name="qty"
+                  id="quantity_wanted"
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  {if $product.quantity_wanted}
+                    value="{$product.quantity_wanted}"
+                    min="{$product.minimal_quantity}"
+                  {else}
+                    value="1"
+                    min="1"
+                  {/if}
+                  class="input-group"
+                  aria-label="{l s='Quantity' d='Shop.Theme.Actions'}"
           >
         </div>
 
         <div class="add">
-          <button
-            class="btn btn-primary add-to-cart"
-            data-button-action="add-to-cart"
-            type="submit"
+          {if $page.page_name != "product"}
             {if !$product.add_to_cart_url}
-              disabled
+              <a class="btn btn-primary add-to-cart" href="{$product.url}">
+                <i class="material-icons shopping-cart">&#xE547;</i>
+                {l s='Show' d='Shop.Theme.Actions'}
+              </a>
+            {else}
+              <button
+                      class="btn btn-primary add-to-cart"
+                      data-button-action="add-to-cart"
+                      type="submit"
+                      {if !$product.add_to_cart_url}
+                        disabled
+                      {/if}
+              >
+                {*            <i class="material-icons shopping-cart">&#xE547;</i>*}
+                {l s='Add to cart' d='Shop.Theme.Actions'}
+              </button>
             {/if}
-          >
-{*            <i class="material-icons shopping-cart">&#xE547;</i>      *}
-            {l s='Add to cart' d='Shop.Theme.Actions'}
-          </button>
+          {else}
+              <button
+                      class="btn btn-primary add-to-cart"
+                      data-button-action="add-to-cart"
+                      type="submit"
+                      {if !$product.add_to_cart_url}
+                          disabled
+                      {/if}
+              >
+                  {*            <i class="material-icons shopping-cart">&#xE547;</i>*}
+                  {l s='Add to cart' d='Shop.Theme.Actions'}
+              </button>
+          {/if}
         </div>
+        
+        
 
         {hook h='displayProductActions' product=$product}
       </div>

@@ -33,6 +33,9 @@
 
     {block name='cms_content'}
       {$cms.content nofilter}
+      {if $cms.id == 8}
+        {hook h='displayCSDepartmentMap'}
+      {/if}
     {/block}
 
     {block name='hook_cms_dispute_information'}
