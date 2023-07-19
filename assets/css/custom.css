@@ -339,13 +339,30 @@ body#checkout a:hover {
 
 /* ---------------header-nav----------------- */
 
+#_header-container, #_desktop_logo {
+   background: white;
+   padding-right: 2rem;
+}
+
+#header .header-nav .container, #header .header-top .container {
+   display: contents;
+}
+
+#header .row:after {
+   display: none;
+}
+
 #header .header-nav {
    padding: 1rem 0;
 }
 
 #header .header-top-right {
-   justify-content: space-between;
+   justify-content: end;
    padding: 0;
+}
+
+#header .header-top > .container > .row:first-of-type {
+   justify-content: end;
 }
 
 #header .header-top a[data-depth="0"] {
@@ -369,11 +386,12 @@ body#checkout a:hover {
 }
 
 #header .header-nav .right-nav {
-   justify-content: space-between;
+   justify-content: end;
+   padding: 0;
 }
 
-#header .header-nav .user-info {
-   margin: 0 1rem;
+.header-right-col {
+   padding: 0;
 }
 
 /*-------------------menu line----------------*/
@@ -381,6 +399,10 @@ body#checkout a:hover {
    position: static;
    display: inline-flex;
    align-items: center;
+}
+
+#search_widget, #_desktop_cart {
+   margin-right: 1rem;
 }
 
 /*#search_widget {
@@ -418,12 +440,37 @@ body#checkout a:hover {
    display: none;
 }
 
+#header .blockcart {
+   border: 2px solid var(--main-color);
+}
+
 #header .header-nav {
    max-height: unset;
 }
 
 #header .header-nav .user-info {
-   margin-top: 0.2rem;
+   /*margin-top: 0.2rem;*/
+   margin: 0;
+   height: 100%;
+}
+
+#header .header-nav .user-info .btn {
+   height: 100%;
+   padding-top: 0.7rem;
+}
+
+#_desktop_logo {
+   height: 117.5px;
+   padding-left: 2rem;
+}
+
+#_desktop_logo h1, #_desktop_logo h1 a, #_desktop_logo h1 a img {
+   height: 100%;
+}
+
+#_desktop_logo h1 a {
+   display: block;
+   padding: 2rem 0;
 }
 
 #header .header-nav .blockcart {
@@ -431,10 +478,30 @@ body#checkout a:hover {
    margin: 0;
 }
 
+#header .header-nav .blockcart {
+   height: unset;
+   padding: 0.45rem 0.75rem;
+}
+
 .top-menu a[data-depth="1"],
 .top-menu a:not([data-depth="0"]) {
    padding: 0 .1rem .1rem 0;
 }
+
+
+/*menu toggle*/
+
+#header .popover .row {
+   display: inline-flex;
+}
+/*#header .column-left {*/
+/*   width: 40%;*/
+/*}*/
+
+/*#header .column-right {*/
+/*   width: 40%;*/
+/*}*/
+
 
 /* ---------------hover on cart----------------*/
 a.link-cart {
@@ -934,22 +1001,30 @@ a.main-button-slider:hover {
    padding-top: 3rem;
 }
 
+.footer-container a.custom-page-link,
+.block-contact p {
+   display: block;
+   color: #000;
+   font-size: 14px;
+   /*line-height: 263.023%;*/
+   letter-spacing: 0.49px;
+   /*margin: 0 0 5px;*/
+   margin: 0.5rem 0;
+   line-height: 100%;
+}
+
 .footer-container p.h3 {
    color: #000;
    font-size: 16px;
    font-weight: 600;
-   line-height: 141.523%;
+   /*line-height: 141.523%;*/
    letter-spacing: 0.56px;
    text-transform: none;
+   margin: 0 0 0.5rem 0;
 }
 
-.footer-container a.custom-page-link,
-.block-contact p {
-   color: #000;
-   font-size: 14px;
-   line-height: 263.023%;
-   letter-spacing: 0.49px;
-   margin: 0 0 5px;
+.footer-container li {
+   margin: 0;
 }
 
 #social-footer {
@@ -966,7 +1041,7 @@ a.main-button-slider:hover {
 #contentanywhere-block-12 {
    position: absolute;
    right: 0;
-   padding: 34px 0 0 0;
+   /*padding: 34px 0 0 0;*/
 }
 
 @media (max-width: 991px) {
@@ -1162,7 +1237,7 @@ a.main-button-slider:hover {
    box-shadow: none;
 }
 
-/* ---------------------produkt-------------------- */
+/* ---------------------product-------------------- */
 .product-accessories {
    margin-top: 30px;
 }
@@ -1399,6 +1474,30 @@ i.touchspin-down {
    width: 3.25rem;
    height: 2.75rem;
 }
+
+/*--- product category cart ---*/
+.add button.without-icon-cart {
+   /* display: none; */
+}
+
+.add button.icon-cart {
+   display: none;
+}
+
+@media (max-width: 476px) {
+   .add button.without-icon-cart {
+      display: none;
+   }
+
+   .add button.icon-cart {
+      display: initial;
+   }
+
+   i.material-icons.shopping-cart {
+      margin-right: 0;
+   }
+}
+
 
 #products .btn.btn-primary.add-to-cart,
 #product .product-accessories .btn.btn-primary.add-to-cart,

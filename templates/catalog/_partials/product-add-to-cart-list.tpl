@@ -54,18 +54,31 @@
               </a>
             {else}
               <button
-                      class="btn btn-primary add-to-cart"
+                      class="btn btn-primary add-to-cart without-icon-cart"
                       data-button-action="add-to-cart"
                       type="submit"
                       {if !$product.add_to_cart_url}
                         disabled
                       {/if}
               >
-              
-                <i class="material-icons shopping-cart">&#xE547;</i>
+
+                {*<i class="material-icons shopping-cart">&#xE547;</i>*}
                 {l s='Add to cart' d='Shop.Theme.Actions'}
               </button>
+
+              <button
+                      class="btn btn-primary add-to-cart icon-cart"
+                      data-button-action="add-to-cart"
+                      type="submit"
+                      {if !$product.add_to_cart_url}
+                        disabled
+                      {/if}
+              >
+                <i class="material-icons shopping-cart">&#xE547;</i>
+              </button>
+
             {/if}
+
           {else}
               <button
                       class="btn btn-primary add-to-cart"

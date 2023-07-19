@@ -27,27 +27,27 @@
     {hook h='displayBanner'}
   </div>
 {/block}
-
+<div class="col-md-2 hidden-sm-down" id="_desktop_logo">
+  {if $shop.logo_details}
+    {if $page.page_name == 'index'}
+      <h1>
+        {renderLogo}
+      </h1>
+    {else}
+      {renderLogo}
+    {/if}
+  {/if}
+</div>
+<div id="_header-container" class="col-md-10">
 {block name='header_nav'}
   <nav class="header-nav">
     <div class="container">
       <div class="row">
-        <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
-          {if $shop.logo_details}
-            {if $page.page_name == 'index'}
-              <h1>
-                {renderLogo}
-              </h1>
-            {else}
-              {renderLogo}
-            {/if}
-          {/if}
-        </div>
-        <div class="hidden-sm-down">
-          <div class="col-md-5 col-xs-12">
-            {hook h='displayNav1'}
-          </div>
-          <div class="col-md-7 right-nav">
+        <div class="hidden-sm-down col-md-12 header-right-col">
+{*          <div class="col-md-3 col-xs-12">*}
+{*            {hook h='displayNav1'}*}
+{*          </div>*}
+          <div class="col-md-12 right-nav">
               {hook h='displayNav2'}
           </div>
         </div>
@@ -94,5 +94,6 @@
       </div>
     </div>
   </div>
+</div>
   {hook h='displayNavFullWidth'}
 {/block}
