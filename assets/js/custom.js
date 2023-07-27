@@ -14,6 +14,20 @@ $(document).ready(function () {
             productTouchSpinInit($(this));
         });
     });
+  
+  
+  	$('#submenu-tabs .nav-link').on('click mouseenter', function(e){
+      	if($(window).width() < 768 && e.type == 'mouseenter') return;
+    	let $this = $(this);
+      	let target = $this.attr('href');
+      	let $target = $(target);
+      	if(!$target.length) return;
+      	
+      	$('#submenu-tabs .active').removeClass('active');
+      	$this.addClass('active');
+      	$target.addClass('active');
+      	e.preventDefault();
+    });
 });
 
 function productTouchSpinInit(item) {

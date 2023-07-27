@@ -100,7 +100,7 @@
                   {$product.price}
                   {* ------------------add Brutto-----------------*}
                   <div class="tax-shipping-delivery-label">
-                    {if !$configuration.taxes_enabled}
+                    ({if !$configuration.taxes_enabled}
                       {l s='No tax' d='Shop.Theme.Catalog'}
                     {elseif $configuration.display_taxes_label}
                       {$product.labels.tax_long}
@@ -120,7 +120,7 @@
                           <span class="delivery-information">{$product.delivery_out_stock}</span>
                         {/if}
                       {/if}
-                    {/if}
+                    {/if})
                   </div>
                 {/if}
               </span>
@@ -147,12 +147,12 @@
         {/block}
       </div>
 
-      <div class="product-actions js-product-actions">
+      <div class="product-list-actions js-product-list-actions">
         {block name='product_buy'}
-          <form action="{$urls.pages.cart}" method="post" id="add-to-cart-or-refresh">
+          <form action="{$urls.pages.cart}" method="post" class="add-to-cart-or-refresh">
             <input type="hidden" name="token" value="{$static_token}">
-            <input type="hidden" name="id_product" value="{$product.id}" id="product_page_product_id">
-            <input type="hidden" name="id_customization" value="{$product.id_customization}" id="product_customization_id" class="js-product-customization-id">
+            <input type="hidden" name="id_product" value="{$product.id}">
+            <input type="hidden" name="id_customization" value="{$product.id_customization}" class="js-product-customization-id">
 
             {block name='product_variants'}
               {include file='catalog/_partials/product-variants.tpl'}

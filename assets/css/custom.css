@@ -2,6 +2,11 @@
  * Custom code goes here.
  * A template should always ship with an empty custom.css*/
 
+/* bootstrap flaws*/
+.d-none {
+   display: none;
+}
+
 /*-----------------font-------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
 
@@ -174,7 +179,6 @@ body#checkout section.checkout-step .address-item.selected {
 
 .tabs .nav-tabs .nav-link.active {
    color: var(--main-color);
-
 }
 
 .tabs .nav-tabs .nav-link.active,
@@ -184,6 +188,10 @@ body#checkout section.checkout-step .address-item.selected {
 
 #product-modal .modal-content .modal-body .product-images img:hover {
    border: var(--main-color) 3px solid;
+}
+
+#product-modal #product-description-short{
+   display: none;
 }
 
 #blockcart-modal .product-name {
@@ -243,7 +251,7 @@ body#checkout section.checkout-step .address-item.selected {
 }
 
 #header a:hover {
-   color: #3E3E3E;
+   color: var(--main-color);
    text-decoration: none
 }
 
@@ -405,21 +413,6 @@ body#checkout a:hover {
    margin-right: 1rem;
 }
 
-/*#search_widget {
-   margin-right: 10px;
-   width: 30px;
-   min-width: 2rem;
-}
-
-#search_widget form i {
-   position: static;
-   padding: 0;
-}
-
-#search_widget .search-window {
-   display: none;
-}*/
-
 #search_widget form i {
    padding-top: 0.8rem;
 }
@@ -452,6 +445,9 @@ body#checkout a:hover {
    /*margin-top: 0.2rem;*/
    margin: 0;
    height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
 
 #header .header-nav .user-info .btn {
@@ -464,11 +460,11 @@ body#checkout a:hover {
    padding-left: 2rem;
 }
 
-#_desktop_logo h1, #_desktop_logo h1 a, #_desktop_logo h1 a img {
+#_desktop_logo h1, #_desktop_logo a, #_desktop_logo a img {
    height: 100%;
 }
 
-#_desktop_logo h1 a {
+#_desktop_logo a {
    display: block;
    padding: 2rem 0;
 }
@@ -492,16 +488,70 @@ body#checkout a:hover {
 /*menu toggle*/
 
 #header .popover .row {
+   display: flex;
+   margin: 0 0.5rem;
+}
+
+#header .popover .left-column {
+   display: flex;
+   flex-direction: column;
+}
+
+#submenu-tabs {
    display: inline-flex;
 }
-/*#header .column-left {*/
-/*   width: 40%;*/
-/*}*/
 
-/*#header .column-right {*/
-/*   width: 40%;*/
-/*}*/
+#submenu-tabs .nav.nav-tabs {
+   display: flex;
+   flex-direction: column;
+}
 
+#submenu-tabs .tab-pane {
+   padding: 0;
+}
+
+#submenu-tabs .nav-tabs .nav-item + .nav-item {
+   margin-left: 0;
+}
+
+#submenu-tabs.tabs {
+   margin-top: 0;
+}
+
+#header #submenu-tabs .tab-pane a {
+   padding-left: 1rem;
+}
+
+#header #submenu-tabs .tab-pane a:hover {
+   color: var(--main-color);
+}
+
+#submenu-tabs.tabs .nav-tabs .nav-link.active {
+   border: none;
+   /*border-left: 2px solid var(--main-color);*/
+   /*padding-left: 0.5rem;*/
+}
+
+#submenu-tabs.tabs .nav-tabs .nav-link.active::before {
+   color: var(--main-color);
+   content: ">";
+   margin-right: 0.5rem;
+}
+
+#submenu-tabs .nav.nav-tabs {
+   border-right: 1px solid var(--main-color);
+   padding-right: 1rem;
+}
+
+.popover.sub-menu {
+   left: unset;
+   margin-left: -1.875rem;
+}
+
+.popover.sub-menu {
+   width: unset;
+   min-width: unset;
+}
 
 /* ---------------hover on cart----------------*/
 a.link-cart {
@@ -525,6 +575,14 @@ a.link-cart {
 /*-----------------slider----------------*/
 #carousel {
    margin-bottom: 0;
+}
+
+.carousel-control .icon-next {
+   margin-right: 0;
+}
+
+.carousel-control .icon-prev {
+   margin-left: 0;
 }
 
 .carousel .carousel-inner {
@@ -552,18 +610,18 @@ a.link-cart {
    margin: 0;
 }
 
-#custom-text-slider {
+.custom-text-slider {
    text-align: center;
 }
 
-#custom-text-slider h2 {
+.custom-text-slider h2 {
    font-size: 2rem;
    color: #fff;
    font-weight: 500;
    margin-bottom: 1.5rem;
 }
 
-#custom-text-slider p {
+.custom-text-slider p {
    font-size: 1.5rem;
    margin-bottom: 1.625rem;
 }
@@ -593,12 +651,12 @@ a.main-button-slider:hover {
 }
 
 @media (max-width: 1440px) {
-   #custom-text-slider h2 {
+   .custom-text-slider h2 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
    }
 
-   #custom-text-slider p {
+   .custom-text-slider p {
       margin-bottom: 1rem;
       font-size: 1.25rem;
    }
@@ -635,12 +693,12 @@ a.main-button-slider:hover {
       color: #fff;
    }
 
-   #custom-text-slider h2 {
+   .custom-text-slider h2 {
       margin-bottom: 0.5rem;
       font-size: 1.25rem;
    }
 
-   #custom-text-slider p {
+   .custom-text-slider p {
       margin-bottom: 0.5rem;
       font-size: 1rem;
    }
@@ -1081,7 +1139,7 @@ a.main-button-slider:hover {
 
 /*------------------footer-copiryght----------------*/
 #footer .сopyright {
-   margin-top: 5rem;
+   margin-top: 3rem;
    background: #d9d9d9;
 }
 
@@ -1369,9 +1427,13 @@ a.main-button-slider:hover {
    }
 }
 
-/*----------------info o iloszcz produktó-------------*/
+/*----------------info o ilosci produktów-------------*/
 #product-availability {
    display: none;
+}
+
+.product-quantity #quantity_wanted {
+   width: 4rem;
 }
 
 /*-------------------------Product category----------------------------*/
@@ -1548,12 +1610,12 @@ i.touchspin-down {
    align-items: center;
 }
 
-.product-information .product-prices-manufacturer img {
-   height: 6.5vh;
+.product-prices div {
+   margin-bottom: 0.5rem;
 }
 
 .current-price span.current-price-value {
-   font-size: 0.75rem;
+   font-size: 1rem;
    color: #9a9a9a;
 }
 
@@ -1564,6 +1626,14 @@ i.touchspin-down {
 
 .product-miniature .product-flags li.product-flag {
    font-size: 0.75rem;
+}
+
+.blockreassurance_product .item-product {
+   padding: 0;
+}
+
+.blockreassurance_product p.block-title:hover {
+   text-decoration: underline;
 }
 
 /* ------- department map --------*/
@@ -1611,6 +1681,10 @@ i.touchspin-down {
 
 #module-cs_b2b-register .form-control-comment {
    float: right;
+}
+
+.cs_b2b-authentication {
+   text-align: center;
 }
 
 /*------ responsive --------*/
@@ -1920,4 +1994,33 @@ i.product-unavailable {
       float: left;
       width: 100%;
    }
+}
+
+
+
+@media(min-width: 768px){
+    #top-menu .top-menu[data-depth="1"] > li{ float: none; }
+    #top-menu .top-menu[data-depth="1"] .collapse{ display: none; }
+    #top-menu .top-menu[data-depth="1"] li{ position: relative; } 
+    #top-menu .top-menu[data-depth="1"] li:hover > .collapse{ position: absolute; top: -1rem; left: 100%; z-index: 1; display: block; }
+
+    .popover .dropdown-item + .collapse {
+       background: white;
+       padding: 1rem 1rem;
+       min-height: 145px;
+       border-left: 1px solid var(--main-color);
+    }
+
+    .dropdown-item + .popover {
+       min-height: 140px;
+    }
+
+   .top-menu .sub-menu ul[data-depth="1"] > li, .top-menu .sub-menu ul[data-depth="2"] > li, .top-menu .sub-menu ul[data-depth="3"] > li {
+      margin: 0;
+      padding: 0 0.5rem 0 0;
+   }
+
+    /*#header .dropdown-item.dropdown-submenu:hover {*/
+    /*   color: var(--main-color);*/
+    /*}*/
 }
