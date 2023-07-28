@@ -31,15 +31,16 @@
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="container">
-    <div class="row">
-      {block name='hook_footer_before'}
-        {hook h='displayFooterBefore'}
-      {/block}
-    </div>
+
+  
+<div class="container">
+  <div class="row">
+    {block name='hook_footer_before'}
+      {hook h='displayFooterBefore'}
+    {/block}
   </div>
 </div>
+  
 
 <div class="footer-container"> 
   <div class="container">
@@ -55,8 +56,7 @@
     </div>
   </div>
  {* ---------------------copyright------------------- *}
-  <div class="container-fluid сopyright">
-    <div class="container"> 
+  <div class="container сopyright">
       <div class="row">
         <div class="col-md-12">
           <p class="text-sm-left">
@@ -69,5 +69,4 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
