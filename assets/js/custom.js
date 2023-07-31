@@ -38,7 +38,7 @@ function productTouchSpinInit(item) {
         verticaldownclass: "touchspin-down",
         buttondown_class: "btn btn-touchspin js-touchspin js-increase-product-quantity",
         buttonup_class: "btn btn-touchspin js-touchspin js-decrease-product-quantity",
-        min: parseInt(item.attr("min"), 10),
+        min: parseInt(isNaN(item.attr("min")) ? 1 : item.attr("min"), 10),
         max: 1e6
     });
 }
