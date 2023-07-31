@@ -59,7 +59,7 @@
   <div class="container сopyright">
       <div class="row">
         <div class="col-md-12">
-          <p class="text-sm-left">
+          <p class="text-sm">
             {block name='copyright_link'}
               <a href="https://computersoft.net.pl/" target="_blank" rel="noopener noreferrer nofollow">
                 {l s='%year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
