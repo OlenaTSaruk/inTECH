@@ -1250,6 +1250,7 @@ p.text-GDPR {
 .product-price-and-shipping {
    display: flex;
    flex-direction: column;
+   justify-content: flex-end;
 }
 
 .product-price-and-shipping span.price {
@@ -1444,6 +1445,14 @@ p.text-GDPR {
 
 .product-miniature .product-variants.js-product-variants {
    display: none;
+}
+
+.product-miniature .thumbnail-container .product-thumbnail {
+   height: 160px;
+}
+
+.product-price-and-shipping {
+   height: 68px;
 }
 
 @media (min-width: 1200px) {
@@ -2176,4 +2185,35 @@ i.product-unavailable {
       margin: 0;
       padding: 0 0.5rem 0 0;
    }
+}
+
+/*------------------------blogs ------------------------*/
+.title_blog.title_block {
+   text-align: center;
+   text-transform: none;
+}
+
+.title_blog.title_block::before,
+.title_blog.title_block::after {
+   content: "-";
+}
+
+.ets_blog_ltr_mode a:hover,
+.ets-blog-wrapper-detail a:hover,
+.ets-blog-like-span:hover,
+.blog-main-page a:hover,
+.ets_button_backtolist:hover,
+.ets-block-comment-report:hover {
+   color: var(--main-color);
+}
+
+#left-column .ets_block_latest,
+#left-column .ets_block_categories,
+#left-column .ets_block_search,
+#left-column .ets_block_archive {
+   display: none;
+}
+
+#ets_blog_page #carousel {
+   display: none;
 }
