@@ -25,6 +25,14 @@ body {
    --newsletter: #4A4A4A;
 }
 
+.forgot-password a {
+   color: var(--new-product);
+}
+
+.form-control:focus {
+   border-color: var(--bestseller);
+}
+
 .a:hover {
    color: var(--main-color);
 }
@@ -1268,6 +1276,11 @@ p.text-GDPR {
 
 .product-prices {
    display: flex;
+   flex-direction: column;
+}
+
+.all-product-price {
+   display: flex;
 }
 
 .product-price-and-shipping {
@@ -1344,12 +1357,8 @@ p.text-GDPR {
    justify-content: start;
 }
 
-/* .blockreassurance_product .item-product {
-margin-right: 10px;
-} */
-
-.blockreassurance_product .item-product svg {
-   width: 1.75rem;
+.blockreassurance_product .item-product {
+   margin-right: .5rem;
 }
 
 #main .tabs {
@@ -1584,6 +1593,22 @@ display: none;
    color: var(--new-product);
 }
 
+.product-flags li.product-flag.discount {
+   border: 1px solid var(--bestseller);
+   padding: 0 10px;
+   background: #fff;
+   font-weight: 400;
+   font-size: .5rem;
+   color: var(--bestseller);
+}
+
+.discount.discount-percentage {
+   padding: 0 10px;
+   background: none;
+   font-weight: 600;
+   color: var(--bestseller);
+}
+
 .product-miniature .product-flags li.product-flag {
    min-height: 0;
 }
@@ -1760,10 +1785,6 @@ i.touchspin-down {
 .price-netto .price-netto {
    font-size: 1.375rem;
    font-weight: 600;
-}
-
-.product-miniature .product-flags li.product-flag {
-   /* font-size: 0.75rem; */
 }
 
 .blockreassurance_product .item-product {
@@ -2062,16 +2083,6 @@ i.touchspin-down {
 .address_tel_phone {
    margin-top: 8px;
 }
-
-
-/* ------------------filter ikons
-i.product-unavailable {
-filter: var(--main-filter);
-}-
-
-.blockreassurance_product .item-product svg.svg replaced-svg path {
-filter: var(--main-filter);
-}---------------- */
 
 @media (max-width: 991px) {
    #page-contact .photo-contact {
