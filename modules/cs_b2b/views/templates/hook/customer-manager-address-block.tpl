@@ -1,0 +1,1 @@
+<p class="alert alert-warning">{l s='Information from this address is going to be displayed to customers managed by you.' mod='cs_b2b'}</p>

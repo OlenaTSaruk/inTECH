@@ -462,17 +462,42 @@ body#checkout a:hover {
 }
 
 #header .header-nav .user-info {
-   /*margin-top: 0.2rem;*/
    margin: 0;
    height: 100%;
    display: flex;
-   flex-direction: column;
    justify-content: center;
+   align-items: center;
+   flex-direction: row-reverse;
+}
+
+#header .header-nav .user-info .account {
+   font-weight: 600;
+}
+
+#header .header-nav .user-info .account {
+   padding-top: 5px;
+}
+
+.logout.hidden-sm-down {
+   padding-left: 20px;
+   padding-top: 2px;
+}
+
+#header a.logout.hidden-sm-down {
+   color: var(--active);
+}
+
+#header a.logout.hidden-sm-down:hover {
+   color: var(--bestseller);
+   font-weight: 600;
+   padding-left: 13px;
+   padding-top: 2px;
 }
 
 #header .header-nav .user-info .btn {
    height: 100%;
    padding-top: 0.7rem;
+   color: var(--active);
 }
 
 #_desktop_logo {
@@ -1432,6 +1457,20 @@ p.text-GDPR {
    text-transform: none;
 }
 
+.product-cover .layer:hover {
+   background: none;
+}
+
+.product-cover .layer .zoom-in {
+   color: var(--main-color);
+   background: var(--active);
+   border-radius: 50%;
+}
+
+.btn-primary:disabled:hover {
+   background-color: var(--active);
+}
+
 @media (max-width: 991px) {
    .product-container.js-product-container>div {
       float: none;
@@ -1603,10 +1642,13 @@ display: none;
 }
 
 .discount.discount-percentage {
+   position: absolute;
+   margin-top: -2px;
    padding: 0 10px;
    background: none;
    font-weight: 600;
    color: var(--bestseller);
+   font-size: 1.25rem;
 }
 
 .product-miniature .product-flags li.product-flag {
@@ -1774,6 +1816,7 @@ i.touchspin-down {
 }
 
 .product-prices div {
+   position: relative;
    margin-bottom: 0.5rem;
 }
 
