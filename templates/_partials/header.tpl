@@ -80,7 +80,7 @@
             {/if}
           {/if}
         </div>*}
-        <div class="header-top-right col-md-10 col-sm-12 position-static">
+        <div class="header-top-right col-md-12 col-sm-12 position-static">
           {hook h='displayTop'}
         </div>
       </div>
