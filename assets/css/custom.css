@@ -914,6 +914,10 @@ a.main-button-slider:hover {
    text-align: center;
 }
 
+#ybc-mnf-block .owl-stage-outer {
+   background: #fff;
+}
+
 /* ---------------newsletter----------------- */
 
 #footer {
@@ -1670,6 +1674,10 @@ i.touchspin-down {
    margin-top: 36px;
 }
 
+.block-contact {
+   padding-left: 0.9375rem;
+}
+
 /* -----------------Contact------------------ */
 #page-contact .address {
    display: flex;
@@ -2104,9 +2112,9 @@ i.touchspin-down {
       font-size: 0.7rem;
    }
 
-   .footer-container .block-contact .float-xs-right {
+   /* .footer-container .block-contact .float-xs-right {
       display: none;
-   }
+   } */
 
    .footer-container .block-contact .title {
       border-bottom: none;
