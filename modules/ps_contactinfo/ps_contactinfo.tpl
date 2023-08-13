@@ -69,7 +69,9 @@
     {/if}
   </div>*}
 
-  {assign var=cms_content value=CMS::getCMSContent(6, true, true)}
-  {$cms_content.content nofilter}
+  <div class="collapse" id="contact-infos">
+    {assign var=cms_content value=CMS::getCMSContent(6, true, true)}
+    {$cms_content.content nofilter}
+  </div>
 
 </div>
