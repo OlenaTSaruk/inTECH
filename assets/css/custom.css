@@ -1931,12 +1931,15 @@ div.brand-infos {
       max-width: 90%;
    }
 
-   .featured-products .products .js-product.product:nth-child(5) {
+   .featured-products .products .js-product.product:nth-child(5),
+   .product-accessories .products .js-product.product:nth-child(5) {
       display: none;
    }
 
 
-   .featured-products .products .js-product.product {
+
+   .featured-products .products .js-product.product,
+   .product-accessories .products .js-product.product {
       width: 25%;
    }
 
@@ -1962,7 +1965,9 @@ div.brand-infos {
 }
 
 @media (min-width: 1200px) {
-   .featured-products .products .js-product.product {
+
+   .featured-products .products .js-product.product,
+   .product-accessories .products .js-product.product {
       width: 20%;
    }
 }
@@ -2088,11 +2093,13 @@ div.brand-infos {
       margin-right: 4px;
    }
 
-   .featured-products .products .js-product.product:last-child {
+   .featured-products .products .js-product.product:last-child,
+   .product-accessories .products .js-product.product:last-child {
       display: none;
    }
 
-   .featured-products .products .js-product.product {
+   .featured-products .products .js-product.product,
+   .product-accessories .products .js-product.product {
       width: 50%;
    }
 
@@ -2100,7 +2107,8 @@ div.brand-infos {
       flex-direction: row;
    }
 
-   #product .featured-products .btn.btn-primary.add-to-cart {
+   #product .featured-products .btn.btn-primary.add-to-cart,
+   #product .product-accessories .btn.btn-primary.add-to-cart {
       font-size: 0.8rem;
    }
 
@@ -2309,11 +2317,13 @@ div.brand-infos {
       width: 100%;
    }
 
-   .featured-products .products .js-product.product {
+   .featured-products .products .js-product.product,
+   .product-accessories .products .js-product.product {
       width: 50%;
    }
 
-   .featured-products .products .js-product.product:last-child {
+   .featured-products .products .js-product.product:last-child,
+   .product-accessories .products .js-product.product:last-child {
       display: none;
    }
 }
@@ -2396,7 +2406,8 @@ div.brand-infos {
       margin: auto;
    }
 
-   #product .featured-products .btn.btn-primary.add-to-cart {
+   #product .featured-products .btn.btn-primary.add-to-cart,
+   #product .product-accessories .btn.btn-primary.add-to-cart {
       font-size: 0.7rem;
    }
 }
@@ -2547,7 +2558,8 @@ div.brand-infos {
       display: none;
    }
 
-   .featured-products .products .js-product.product {
+   .featured-products .products .js-product.product,
+   .product-accessories .products .js-product.product {
       width: 100%;
    }
 
