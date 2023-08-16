@@ -972,6 +972,18 @@ p.text-GDPR {
    margin-left: 0;
 }
 
+#footer .block_newsletter p.text-GDPR {
+   display: none;
+}
+
+.gdpr_consent {
+   margin-top: 10px !important;
+}
+
+.custom-checkbox input[type=checkbox]+span .checkbox-checked {
+   color: #fff;
+}
+
 /* ---------------footer-nav----------------- */
 #footer .container {
    position: relative;
@@ -1622,10 +1634,6 @@ i.touchspin-down {
    letter-spacing: 1.5px;
 }
 
-#o-firmie {
-   margin-bottom: 60px;
-}
-
 #o-firmie hr {
    margin-top: 0.65rem;
 }
@@ -1878,6 +1886,10 @@ i.touchspin-down {
 @media (max-width: 996px) {
    #_desktop_logo a {
       padding: 1.2rem 0 2rem 0;
+   }
+
+   o-firmie .text-ikons-firma {
+      padding-bottom: 0;
    }
 }
 
@@ -2197,6 +2209,10 @@ i.touchspin-down {
       width: 504px;
       max-height: 320px;
       margin: 0 0 26px 0;
+   }
+
+   #blockEmailSubscription_displayFooterBefore {
+      width: 90%;
    }
 }
 
