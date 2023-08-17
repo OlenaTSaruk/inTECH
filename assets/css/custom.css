@@ -250,6 +250,10 @@ body#checkout section.checkout-step .address-item.selected {
    border-bottom: none;
 }
 
+.block_newsletter {
+   border-bottom: none;
+}
+
 #header {
    position: sticky;
    top: 0;
@@ -2059,7 +2063,6 @@ footer.page-footer a {
       padding-bottom: 0;
    }
 
-
    .product-price-and-shipping span.price {
       display: inline-flex;
       flex-direction: column;
@@ -2458,10 +2461,6 @@ footer.page-footer a {
       width: 90%;
    }
 
-   #blockEmailSubscription_displayFooterBefore {
-      width: 90%;
-   }
-
    #new-products #left-column {
       width: 100%;
    }
@@ -2626,12 +2625,6 @@ footer.page-footer a {
 
    #page-contact .address_photo img {
       width: auto;
-   }
-}
-
-@media (min-width: 425px) {
-   #product button.btn.btn-primary.add-to-cart.icon-cart-mini {
-      display: none;
    }
 }
 
