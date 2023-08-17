@@ -40,7 +40,7 @@
       <a class="label" href="{$product.url}" data-id_customization="{$product.id_customization|intval}">{$product.name}</a>
     </div>
 
-    <div class="product-line-info product-price h5 {if $product.has_discount}has-discount{/if}">
+    <div class=" h5 {if $product.has_discount}has-discount{/if}">
       {if $product.has_discount}
         <div class="product-discount">
           <span class="regular-price">{$product.regular_price}</span>

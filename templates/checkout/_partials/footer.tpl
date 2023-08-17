@@ -22,20 +22,51 @@
  * @copyright Since 2007 PrestaShop SA and Contributors
  * @license   https://opensource.org/licenses/AFL-3.0 Academic Free License 3.0 (AFL-3.0)
  *}
-<div class="modal fade js-checkout-modal" id="modal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <button type="button" class="close" data-dismiss="modal" aria-label="{l s='Close' d='Shop.Theme.Global'}">
-        <span aria-hidden="true">&times;</span>
-      </button>
-      <div class="js-modal-content"></div>
-    </div>
+{*--------------------hook Manufacturer-------------------*}
+<div class="container-fluid manufacturer">
+ 	<div class="row">
+    {block name='hook_footer_before'}
+      {hook h='etsManufacturer'}
+    {/block}
   </div>
 </div>
 
-<div class="text-sm-center">
-  {if $tos_cms != false}
-    <span class="d-block js-terms">{$tos_cms nofilter}</span>
-  {/if}
-  {l s='%copyright% %year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+
+  
+<div class="container">
+  <div class="row">
+    {block name='hook_footer_before'}
+      {hook h='displayFooterBefore'}
+    {/block}
+  </div>
+</div>
+  
+
+<div class="footer-container"> 
+  <div class="container">
+    <div class="row">
+      {block name='hook_footer'}
+        {hook h='displayFooter'}
+      {/block}
+    </div>
+    <div class="row">
+      {block name='hook_footer_after'}
+        {hook h='displayFooterAfter'}
+      {/block}
+    </div>
+  </div>
+ {* ---------------------copyright------------------- *}
+  <div class="container сopyright">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-sm">
+            {block name='copyright_link'}
+              <a href="https://computersoft.net.pl/" target="_blank" rel="noopener noreferrer nofollow">
+                {l s='%year% - Ecommerce software by %prestashop%' sprintf=['%prestashop%' => 'PrestaShop™', '%year%' => 'Y'|date, '%copyright%' => '©'] d='Shop.Theme.Global'}
+              </a>
+            {/block}
+          </p>
+        </div>
+      </div>
+    </div>
 </div>
