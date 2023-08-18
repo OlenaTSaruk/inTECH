@@ -371,7 +371,6 @@ footer.page-footer .text-sm-center a {
 #_header-container,
 #_desktop_logo {
    background: white;
-   padding-right: 2rem;
 }
 
 #header .header-nav .container,
@@ -384,7 +383,7 @@ footer.page-footer .text-sm-center a {
 }
 
 #header .header-nav {
-   padding: 1rem 0;
+   padding: 1rem;
 }
 
 #header .header-top-right {
